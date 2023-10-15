@@ -1,0 +1,765 @@
+<%# <a href="https://github.com/alexandracaulea/freecodecamp-projects/tree/master/Responsive-Web-Design-Projects/Build%20a%20Survey%20Form" target="_blank" rel="noopener noreferrer" class="github-corner" aria-label="View source on GitHub">
+  <svg width="86" height="82" viewBox="0 0 86 82" fill="none">
+    <path d="M85.346.362h-85l85 81.175V.362z" />
+  </svg>
+</a> %>
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="header__title"><b>Rapid Insights</b></h1>
+    <h5><i>by Capital Insight</i></h5>
+    <%# <p id="description" class="header__description">
+      We would love to hear your thoughts on how we can improve your experience.
+    </p> %>
+    <br>
+    <%# <img src="https://res.cloudinary.com/alexandracaulea/image/upload/v1585333913/illustration_x46ict.svg" alt="" aria-hidden="true" class="illustration" /> %>
+        <%= link_to image_tag("1 Me When I be Picking and Choosing.png", width: "350", height: "250"), root_path %>
+  </header>
+  <main class="main">
+    <form action="#" method="GET" id="survey-form" class="survey" novalidate>
+      <div class="progressbar" tabindex="0" role="progressbar" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1" aria-valuetext="Question 1 of 5: How long have you been using our product?">
+        <span class="progressbar__step active" aria-hidden="true"></span>
+        <span class="progressbar__step" aria-hidden="true"></span>
+        <span class="progressbar__step" aria-hidden="true"></span>
+        <span class="progressbar__step" aria-hidden="true"></span>
+        <span class="progressbar__step" aria-hidden="true"></span>
+        <span class="progressbar__step" aria-hidden="true"></span>
+        <span class="progressbar__step" aria-hidden="true"></span>
+        <span class="progressbar__step" aria-hidden="true"></span>
+        <span class="progressbar__step" aria-hidden="true"></span>
+        <span class="progressbar__step" aria-hidden="true"></span>
+      </div>
+
+      <section class="survey__panel survey__panel--current" aria-hidden="false" data-index="1" data-panel="firstPanel" data-requirement="option">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 1 of 10 </span>What type of purchase are you considering making?
+        </h2>
+        <div class="survey__panel__period">
+          <div class="form-group">
+            <input id="house" type="radio" name="question_1" value="house" />
+            <label for="house">House</label>
+          </div>
+          <div class="form-group">
+            <input id="car" type="radio" name="question_1" value="car" />
+            <label for="car">Car</label>
+          </div>
+          <div class="form-group">
+            <input id="yacht" type="radio" name="question_1" value="yacht" />
+            <label for="yacht">Yacht</label>
+          </div>
+          <div class="form-group">
+            <input id="other" type="radio" name="question_1" value="other" />
+            <label for="other">Other</label>
+          </div>
+        </div>
+        <p class="error-message"></p>
+
+      </section>
+
+      <section class="survey__panel" aria-hidden="true" data-index="2" data-panel="secondPanel" data-requirement="option">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 2 of 10 </span>What is the total purchase price of the property you are considering?
+        </h2>
+        <div class="survey__panel__satisfaction">
+          <div class="form-group">
+          <h2>$</h2>
+          <textarea name="price" id="price" spellcheck="false"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="survey__panel" aria-hidden="true" data-index="3" data-panel="thirdPanel" data-requirement="checkbox">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 3 of 10 </span>How much are you planning to put down as a down payment?
+        </h2>
+        <div class="survey__panel__satisfaction">
+          <div class="form-group">
+            <h2>$</h2><textarea name="price" id="price" spellcheck="false"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <section class="survey__panel" aria-hidden="true" data-index="4" data-panel="fourthPanel" data-requirement="option">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 4 of 10 </span>What loan term are you considering?
+        </h2>
+        <div class="survey__panel__recommendation">
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="norecomment" value="no" />
+            <label for="norecomment">15 or less</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="maybe" />
+            <label for="mayberecommend">16-20</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="yesrecommend" value="yes" />
+            <label for="yesrecommend">21-30</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="yesrecommend" value="yes" />
+            <label for="yesrecommend">30 or more</label>
+          </div>
+        </div>
+        <p class="error-message"></p>
+      </section>
+
+      <section class="survey__panel" aria-hidden="true" data-index="5" data-panel="fifthPanel" data-requirement="option">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 5 of 10 </span>Does this purchase align with your long-term financial goals, such as retirement or building wealth?
+        </h2>
+        <div class="survey__panel__recommendation">
+          <div class="form-group">
+            <input id="completelysatisfied" type="radio" class="radiobox" name="question_5" value="Completely Satisfied" />
+            <label for="completelysatisfied">Strongly Aligns: This purchase is a key step toward achieving my long-term financial goals, such as retirement or building wealth.</label>
+          </div>
+          <div class="form-group">
+            <input id="completelysatisfied" type="radio" class="radiobox" name="question_5" value="Completely Satisfied" />
+            <label for="completelysatisfied">Somewhat Aligns: While this purchase may not directly contribute to my long-term goals, it won't hinder them either. It's a reasonable expenditure.</label>
+          </div>
+          <div class="form-group">
+            <input id="completelysatisfied" type="radio" class="radiobox" name="question_5" value="Completely Satisfied" />
+            <label for="completelysatisfied">Neutral: I'm unsure if this purchase has any significant impact on my long-term financial goals. It's more of a short-term consideration.</label>
+          </div>
+          <div class="form-group">
+            <input id="completelysatisfied" type="radio" class="radiobox" name="question_5" value="Completely Satisfied" />
+            <label for="completelysatisfied">Somewhat Hinders: This purchase might have a modest negative impact on my long-term financial goals, but I believe it's necessary for other reasons.</label>
+          </div>
+          <div class="form-group">
+            <input id="completelysatisfied" type="radio" class="radiobox" name="question_5" value="Completely Satisfied" />
+            <label for="completelysatisfied">Strongly Hinders: This purchase is not in alignment with my long-term financial goals, and I recognize it may set me back in achieving them.</label>
+          </div>
+          <div class="form-group">
+            <input id="completelysatisfied" type="radio" class="radiobox" name="question_5" value="Completely Satisfied" />
+            <label for="completelysatisfied">Not Applicable: This purchase is unrelated to my long-term financial goals, which I'm addressing separately.</label>
+          </div>
+        </div>
+        <p class="error-message"></p>
+      </section>
+
+      <section class="survey__panel" aria-hidden="true" data-index="6" data-panel="sixthPanel" data-requirement="option">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 6 of 10 </span>What is your risk tolerance for this investment?
+        </h2>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="maybe" />
+            <label for="mayberecommend">Very risk-adverse</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="maybe" />
+            <label for="mayberecommend">Slightly risk-adverse</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="maybe" />
+            <label for="mayberecommend">Comfortable with risk</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="maybe" />
+            <label for="mayberecommend">Comfortable with high risk</label>
+          </div>
+          
+       
+        <p class="error-message"></p>
+      </section>
+
+      <section class="survey__panel" aria-hidden="true" data-index="7" data-panel="seventhPanel" data-requirement="option">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 7 of 10 </span>Do you have an exit strategy in mind for this investment? For example, do you plan to hold it long-term or sell it after a certain period?
+        </h2>
+        <div class="survey__panel__recommendation">
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="norecomment" value="no" />
+            <label for="norecomment">Long-Term Hold: I intend to hold this investment for an extended period, with no specific plans to sell it in the foreseeable future.</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="maybe" />
+            <label for="mayberecommend">Medium-Term Hold: My plan is to hold this investment for a few years before considering selling it or reassessing my strategy.</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="yesrecommend" value="yes" />
+            <label for="yesrecommend">Short-Term Hold: I anticipate selling this investment relatively soon, typically within the next year or so.</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="maybe" />
+            <label for="mayberecommend">Specific Milestone: I have a particular financial milestone or condition in mind that will trigger the sale of this investment.</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_4" id="yesrecommend" value="yes" />
+            <label for="yesrecommend">Market Conditions: I plan to sell this investment when specific market conditions or price targets are met.</label>
+          </div>
+          <div class="form-group">
+          <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="maybe" />
+          <label for="mayberecommend">Diversification: My intention is to sell this investment to rebalance my portfolio or diversify my holdings.</label>
+        </div>
+        <div class="form-group">
+          <input type="radio" class="radiobox" name="question_4" id="yesrecommend" value="yes" />
+          <label for="yesrecommend">Profit Target: I have a target profit percentage in mind, and I plan to sell when that target is achieved.</label>
+        </div>
+        <div class="form-group">
+        <input type="radio" class="radiobox" name="question_4" id="mayberecommend" value="maybe" />
+        <label for="mayberecommend">Stop-Loss: I have a predefined stop-loss strategy, and I will sell if the investment's value drops to a certain level</label>
+      </div>
+      <div class="form-group">
+        <input type="radio" class="radiobox" name="question_4" id="yesrecommend" value="yes" />
+        <label for="yesrecommend">Undecided: I haven't decided on a specific exit strategy for this investment yet.</label>
+      </div>
+        </div>
+        <p class="error-message"></p>
+      </section>
+
+      <section class="survey__panel" aria-hidden="true" data-index="8" data-panel="eighthpanel" data-requirement="option">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 8 of 10 </span>Are there any other anticipated expenses related to the property purchase that you're aware of?
+        </h2>
+        <div class="survey__panel__satisfaction">
+          <div class="form-group">
+          <textarea name="price" id="price" spellcheck="false"></textarea>
+        </div>
+      </div>
+        <p class="error-message"></p>
+      </section>
+
+      <section class="survey__panel" aria-hidden="true" data-index="9" data-panel="ninethpanel" data-requirement="option">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 9 of 10 </span>Do you have an established emergency fund or readily accessible savings that you can rely on in case of unexpected expenses or financial emergencies related to this property investment?
+        </h2>
+        <div class="survey__panel__recommendation">
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_9" id="norecomment" value="no" />
+            <label for="norecomment">No</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_9" id="mayberecommend" value="maybe" />
+            <label for="mayberecommend">Maybe</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" class="radiobox" name="question_9" id="yesrecommend" value="yes" />
+            <label for="yesrecommend">Yes</label>
+          </div>
+          <div class="form-group form-group-textarea">
+            <label for="recommendation">Elaboration (if desired):</label>
+            <textarea name="recommendText" id="recommendation" spellcheck="false"></textarea>
+          </div>
+        </div>
+        <p class="error-message"></p>
+      </section>
+
+    <section class="survey__panel" aria-hidden="true" data-index="9" data-panel="tenthpanel" data-requirement="option">
+        <h2 class="survey__panel__question">
+          <span class="visuallyhidden">Question 10 of 10 </span>How flexible are your current financial commitments and obligations on a scale of 1 (Not at all flexible) to 5 (Very much flexible), such as outstanding loans or debts, in accommodating this new property investment?
+        </h2>
+        <button class="btn btn-scale">1</button>
+        <button class="btn btn-scale">2</button>
+        <button class="btn btn-scale">3</button>
+        <button class="btn btn-scale">4</button>
+        <button class="btn btn-scale">5</button>
+        <button class="btn btn-scale">6</button>
+        <p class="error-message"></p>
+        <br>
+             <div class="btn btn-success" style='text-decoration: none; color: black;'>
+          <%= link_to('Submit', '/results') %>
+        </div>
+        
+   
+      </section>
+
+      <div class="form-buttons">
+        <button class="button" type="button" name="prev" disabled="disabled" aria-label="Previous" aria-hidden="true">
+          Prev
+        </button>
+        <button class="button" type="button" name="next" aria-label="Next" aria-hidden="false">Next</button>
+        <button class="button" type="submit" id="submit" name="submit" disabled="disabled" aria-hidden="true">
+          Submit
+        </button>
+      </div>
+    </form>
+  </main>
+</div>
+
+<%# <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> %>
+<style> 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --darkBlue: #010a43;
+  --lightGreen: #a7e9af;
+  --whiteClr: #fff;
+  --lightBlue: rgba(0, 64, 128, 0.2);
+  --intenseBlue: #46b3e6;
+}
+
+:focus {
+  outline: 2px solid #f8dc88;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--darkBlue);
+  background-color: #fdfdfd;
+}
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-gap: 40px;
+  align-content: center;
+}
+
+.main {
+  display: block;
+  align-self: start;
+}
+
+.btn-scale {
+  min-width: 44px;
+  width: 6%;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  font-family: 'Lato', sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.header {
+  align-self: center;
+  text-align: center;
+}
+
+.header__title {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.2;
+}
+
+.header__description {
+  margin-bottom: 3rem;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+main.submission {
+  align-self: center;
+  justify-self: center;
+}
+
+h2.submission {
+  text-align: center;
+}
+
+.illustration {
+  width: 100%;
+  border-style: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .header,
+  .main {
+    grid-row: 1;
+  }
+}
+
+.progressbar {
+  margin: 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  counter-reset: list;
+  height: 20px;
+}
+
+.progressbar__step {
+  position: relative;
+  width: 10%;
+  line-height: 1.4;
+}
+
+.progressbar__step.active:before {
+  background-color: var(--lightGreen);
+}
+
+.progressbar__step:nth-child(2)::after,
+.progressbar__step:nth-child(3)::after,
+.progressbar__step:nth-child(4)::after,
+.progressbar__step:nth-child(5)::after,
+.progressbar__step:nth-child(6)::after,
+.progressbar__step:nth-child(7)::after,
+.progressbar__step:nth-child(8)::after,
+.progressbar__step:nth-child(9)::after,
+.progressbar__step:nth-child(10)::after{
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 12px;
+  z-index: -1;
+  width: 100%;
+  height: 2px;
+  background-color: var(--lightBlue);
+}
+
+.progressbar__step.active:nth-child(2)::after,
+.progressbar__step.active:nth-child(3)::after,
+.progressbar__step.active:nth-child(4)::after,
+.progressbar__step.active:nth-child(5)::after, 
+.progressbar__step.active:nth-child(6)::after,
+.progressbar__step.active:nth-child(7)::after,
+.progressbar__step.active:nth-child(8)::after,
+.progressbar__step.active:nth-child(9)::after
+.progressbar__step.active:nth-child(10)::after{
+  background-color: var(--lightGreen);
+}
+
+.progressbar__step:before {
+  counter-increment: list;
+  content: counter(list);
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  font-size: 0.85rem;
+  background-color: var(--whiteClr);
+  text-align: center;
+  border: 3px solid var(--lightBlue);
+  border-radius: 100%;
+}
+
+.survey {
+  display: flex;
+  flex-direction: column;
+}
+
+.survey__panel {
+  display: none;
+  padding: 1rem;
+}
+
+.survey__panel--current {
+  display: block;
+}
+
+.survey__panel__question {
+  margin: 0 0 1.5rem;
+  font-size: 1.35em;
+  line-height: 1.2;
+}
+
+.survey__panel strong {
+  --darkGrey: #4b4b4b;
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: var(--darkGrey);
+}
+
+.error-message {
+  --errClr: #b80d57;
+  height: 14px;
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  color: var(--errClr);
+}
+
+[role="alert"] {
+  display: block;
+}
+
+.survey__panel__period {
+  display: grid;
+  grid-gap: 13px;
+  grid-template-columns: repeat(2, 150px);
+}
+
+.survey__panel__period [type="radio"] {
+  opacity: 0;
+  display: block;
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.survey__panel__period label {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  padding: 15px 30px;
+  border: 2px solid var(--lightBlue);
+  text-align: center;
+  border-radius: 3px;
+}
+
+.survey__panel__period label:hover,
+.survey__panel__period [type="radio"]:checked + label {
+  border-color: var(--intenseBlue);
+}
+
+.review__period [type="radio"]:checked + label {
+  border: var(--intenseBlue);
+}
+
+.radiobox,
+.radiobox:checked,
+.radiobox:not(:checked),
+.checkbox,
+.checkbox:not(:checked) {
+  opacity: 0;
+}
+
+.radiobox:checked + label,
+.radiobox:not(:checked) + label,
+.checkbox:checked + label,
+.checkbox:not(:checked) + label {
+  position: relative;
+  padding-left: 30px;
+}
+
+.radiobox:checked + label:before,
+.radiobox:not(:checked) + label:before,
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background-color: var(--whiteClr);
+}
+
+.radiobox:checked + label:after,
+.radiobox:not(:checked) + label:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--intenseBlue);
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 100%;
+  transition: transform 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86),
+    opacity 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.radiobox:not(:checked) + label:after,
+.checkbox:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.radiobox:checked + label:after,
+.checkbox:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.survey__panel__satisfaction label,
+.survey__panel__recommendation label,
+.survey__panel__personaldetails label,
+.survey__panel__hearabout label {
+  line-height: 2;
+}
+
+.form-group-textarea {
+  margin-top: 1rem;
+}
+
+.form-group-textarea label {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.form-group-textarea textarea {
+  padding: 10px;
+  overflow: auto;
+  font-size: 0.9rem;
+  display: block;
+  border: 2px solid var(--lightBlue);
+  font-family: inherit;
+  width: 100%;
+  resize: vertical;
+  min-height: 100px;
+  max-width: 300px;
+  color: var(--darkBlue);
+  -webkit-appearance: none;
+}
+
+.survey__panel .radiobox {
+  margin-left: 10px;
+}
+
+.checkbox:checked + label:before,
+.checkbox:not(:checked) + label:before {
+  border-radius: 0;
+}
+
+.checkbox:checked + label:before {
+  background-color: var(--intenseBlue);
+}
+
+.checkbox:checked + label:after,
+.checkbox:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  width: 2px;
+  height: 2px;
+  background-color: var(--whiteClr);
+  box-shadow: 2px 0 0 var(--whiteClr), 4px 0 0 var(--whiteClr),
+    4px -2px 0 var(--whiteClr), 4px -4px 0 var(--whiteClr),
+    4px -6px 0 var(--whiteClr), 4px -8px 0 var(--whiteClr);
+  transform: rotate(45deg);
+  transition: transform 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86),
+    opacity 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86),
+    background-color 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.survey__panel__personaldetails .form-group {
+  margin: 1rem 0;
+}
+
+.survey__panel__personaldetails .name,
+.survey__panel__personaldetails .email,
+.survey__panel__personaldetails .age {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.survey__panel__personaldetails [name="name"],
+.survey__panel__personaldetails [name="email"],
+.survey__panel__personaldetails [name="country"] {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 2px solid var(--lightBlue);
+  max-width: 300px;
+  -webkit-appearance: none;
+}
+
+.survey__panel__personaldetails [name="age"] {
+  padding: 0.6rem 0.75rem;
+  border: 2px solid var(--lightBlue);
+  -webkit-appearance: none;
+}
+
+.form-buttons {
+  display: flex;
+  max-width: 400px;
+  margin-left: 10px;
+  margin-top: auto;
+}
+
+.button {
+  --btnClr: #5f6caf;
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--btnClr);
+  color: var(--whiteClr);
+  border: 2px solid var(--btnClr);
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button[disabled] {
+  display: none;
+}
+
+.button {
+  margin: 0 0.5rem;
+}
+
+.button:hover {
+  --btnHoverClr: #444e83;
+  background-color: var(--btnHoverClr);
+  border-color: var(--btnHoverClr);
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+</style>

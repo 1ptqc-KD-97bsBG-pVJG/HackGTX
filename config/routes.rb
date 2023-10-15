@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "pages#index"
+  get '/rapid-insights', to: 'quick_insights#step1'
+  get '/results', to: 'quick_insights#results'
 end
